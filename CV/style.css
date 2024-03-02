@@ -1,4 +1,5 @@
 *
+
 {
     margin: 0;
     padding: 0;
@@ -7,7 +8,7 @@
 }
 
 body{
-    background: lightblue;
+    background: rgb(122, 179, 248);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,14 +24,14 @@ body{
     margin: 50px;
     display: grid;
     grid-template-columns: 1fr 2fr;
-    box-shadow: 0 35px 55px rgba(0, 0,0 , 0.1);
+    box-shadow: 0 70px 70px rgba(0, 0, 0, 0.1);
 
 }
 
 .container .left_Side
 {
     position: relative;
-    background: #003147;
+    background: #192e6e;
     padding: 40px;
 
 }
@@ -41,28 +42,35 @@ body{
     flex-direction: column;
     align-items: center;
     padding-bottom: 20px;
-    border-bottom: 1px solid rgba(255, 255,255 , 0.2);
+    border-bottom: 1px solid rgb(255, 255, 255);
 }
 
-.profileText .imgBx
-{
+.profileText .imgBx {
     position: relative;
     width: 200px;
     height: 200px;
     border-radius: 50%;
     overflow: hidden;
-   box-shadow: #003147;
-
+    border: 5px solid #000;
+    
 }
 
-.profileText .imgBx img{
+.profileText .imgBx:hover {
+
+    width: 220px;
+    height: 220px;
+    transition: width 1s, height 1s;
+}
+
+.profileText .imgBx img {
     position: absolute;
-    top:0;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+
 
 .profileText h2{
     color: #fff;
@@ -89,7 +97,7 @@ text-transform: uppercase;
 font-weight: 600;
 letter-spacing: 1px;
 margin-bottom: 20px;
-border-bottom: #fff  1px;
+border-bottom: #fff  2px;
 }
 
 .contactInfo ul{
@@ -102,6 +110,13 @@ border-bottom: #fff  1px;
     list-style: none;
     margin: 10px 0;
     cursor: pointer;
+}
+
+.contactInfo ul li :hover{
+color: #658eec;
+font-size: 16px;
+font-weight: 300;
+
 }
 
 .contactInfo ul li .icon{
@@ -139,6 +154,7 @@ font-weight: 500;
     display: block;
     margin-top: 5px ;
 }
+
 .contactInfo.language .percent div{
 position: relative;
 top: 0;
@@ -150,13 +166,14 @@ background: #03a9f4;
 .container .right_Side
 {
     position: relative;
-    background: #fff;
+    background: #ffffff;
     padding: 40px;
 
 }
 
 .about{
     margin-bottom: 50px;
+    border-bottom: 1px #ddd ;
 }
 
 .about p{
@@ -218,18 +235,32 @@ font-weight: 500;
 .skills .box .percent{
     position: relative;
     width: 100%;
-    height: 10px;
+    height: 15px;
     background: #848c99;
+    border-radius: 10%;
+    border: 1px solid #000000;
+    
 }
 
 .skills .box .percent div{
    position: absolute;
+   border-right: #333 1px solid;
+   border-radius: 10%;
    top: 0;
    left: 0;
    height: 100%;
-   background: #03a9f4;
+   background: #3f67df;
+   animation: progressBarAnimation 3s ease-in-out infinite;
 
 }
+@keyframes progressBarAnimation {
+    0% {
+      width: 0;
+    }
+    100% {
+      max-width: width;
+    }
+  }
 
 
 .interest ul li{
