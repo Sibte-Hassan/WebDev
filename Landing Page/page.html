@@ -1,53 +1,199 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta name ="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Animart</title>
-        <link rel = "stylesheet" type = "text/css"  href = "style.css">
-        <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-    </head>
-    <body>
-        <div class = "container">
-            <div class = "page">
-                <div class = "header">
-                    <nav class="navbar bg-body-tertiary">
-                        <div class="container-fluid">
-                          <a class="navbar-brand">Navbar</a>
-                          <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success" type="submit">Search</button>
-                          </form>
-                        </div>
-                      </nav>
-                    
-                </div>
-                <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img src="Images\wp4741022-demon-slayer-kimetsu-no-yaiba-4k-wallpapers.png" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="Images\wp8738443-ps4-anime-aot-wallpapers.jpg" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="Images\wp8799159-jujutsu-kaisen-computer-wallpapers.jpg" class="d-block w-100" alt="...">
-                      </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div>
-
-                  <div>
-                    
-                  </div>
-            </div>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jewellers</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    ">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR-->
+    <nav class="navbar navbar-expand-lg bg-white sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#"
+          ><img src="./assets/Images/logo-dark.svg" alt="" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#home"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#about"
+                >About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#products"
+                >Products</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="contact.html"
+                >Contact</a
+              >
+            </li>
+          </ul>
+          <a href="#" class="btn btn-brand ms-lg-3">Download</a>
         </div>
-    </body>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="hero" class="min-vh-100 d-flex align-items-center text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h1
+              data-aos="fade-left"
+              class="text-uppercase text-white fw-semibold display-1"
+            >
+              Welcome to Jewellers
+            </h1>
+            <h5
+              class="text-uppercase text-white mt-3 mb-4"
+              data-aos="fade-right"
+            >
+              Providing exquisite, high quality jewellery
+            </h5>
+            <div data-aos="fade-up" data-aos-delay="50">
+              <a href="#" class="btn btn-brand me-2">Get Started</a>
+              <a href="#" class="btn btn-light ms-2">Services</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+
+    <section id="about" class="section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <div class="section_title">
+              <h1 class="display-4 fw-semibold">About us</h1>
+              <div class="line"></div>
+              <p>Providing exquisite, high quality jewellery</p>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-between align-items-center">
+          <div class="col-lg-6">
+            <img src="assets\Images\about.jpg" alt="" />
+          </div>
+          <div class="col-lg-5">
+            <h1>About Elixir</h1>
+            <p>
+              Welcome to Elixir, where opulence meets artistry in every
+              meticulously crafted piece. Elevate your style with our exclusive
+              collection of high-end jewelry, featuring rare gemstones and
+              exquisite designs. Indulge in the allure of luxury and redefine
+              your elegance with Elixir's timeless creations.
+            </p>
+            <div class="d-flex">
+              <div class="iconbox me-4">
+                <i class="ri-mail-send-line"></i>
+              </div>
+              <div>
+                <h5>100 years experience</h5>
+                <p>Providing best jewellery in country for more than 100 years</p>
+              </div>
+            </div>
+            <div class="d-flex">
+              <div class="iconbox me-4">
+                <i class="ri-home-5-fill"></i>
+              </div>
+              <div>
+                <h5>Best Quality</h5>
+                <p>Quality standards are always maintained. Only products which pass a certain level are qualified to be sold</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- Products -->
+
+    <section id="products" class="section-padding border-top p-lg-5">
+      <div>
+        <div class="container">
+          <div class="row">
+            <div class="col-12 text-center">
+              <div class="section_title">
+                <h1 class="display-4 fw-semibold">Awesome Products</h1>
+                <div class="line"></div>
+                <p>Take a look at the finest Jewellery in town!</p>
+              </div>
+            </div>
+          </div>
+          <div class="row g-4 text-center">
+            <div class="col-lg-4 col-sm-6">
+              <div class="products theme-shadow p-lg-5 p-4">
+                <div class="iconbox">
+                  <i class="ri-edit-circle-line"></i>
+                </div>
+                <h5 class="mt-4 mb-3">Ring</h5>
+                <p>Discover timeless elegance in our ring collection.</p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6">
+              <div class="products theme-shadow p-lg-5 p-4">
+                <div class="iconbox">
+                  <i class="ri-restart-line"></i>
+                </div>
+                <h5 class="mt-4 mb-3">Bracelets</h5>
+                <p>
+                  Discover elegance in our bracelet collection. From delicate to
+                  bold, each piece reflects your style.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6">
+              <div class="products theme-shadow p-lg-5 p-4">
+                <div class="iconbox">
+                  <i class="ri-infinity-line"></i>
+                </div>
+                <h5 class="mt-4 mb-3">Necklaces</h5>
+                <p>
+                  Adorn your neckline with our stunning collection. From
+                  pendants to chains, express your elegance.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+ 
+
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script><
+
+  </body>
 </html>
