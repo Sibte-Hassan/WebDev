@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Story App</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<h1>Story App</h1>
+
+<div id="storyList">
+   
+</div>
+
+<form id="addStoryForm">
+    <input type="text" id="storyInput" placeholder="Enter new story title">
+    <input type="text" id="storyContent" placeholder="Enter new story content">
+    <button type="submit">Add Story</button>
+</form>
+
+<script>
+$(document).ready(function() {
+    
+    function fetchStories() {
+        $.ajax({
+            url: 'https://usmanlive.com/wp-json/api/stories',
+            method: 'GET',
+            success: function(response) {
+                $('#storyList').empty(); 
+                response.forEach(function(story) {
+                    $('#storyList').append(`<div class="story" data-id="${story.id}">
+                        <h3>${story.title}</h3>
+                        <p>${story.content}</p>
+                        <button class="deleteBtn">Delete</button>
+                    </div>`);
+                });
+            }
+        });
+    }
+
+  
+    fetchStories();
+
+  
+    $('#addStoryForm').submit(function(event) {
+        event.preventDefault();
+        var storyTitle = $('#storyInput').val();
+        var storyContent = $('#storyContent').val();
+        $.ajax({
+            url: 'https://usmanlive.com/wp-json/api/stories',
+            method: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify({
+                title: storyTitle,
+                content: storyContent
+            }),
+            success: function(response) {
+                fetchStories(); 
+                $('#storyInput').val(''); 
+                $('#storyContent').val('');
+            }
+        });
+    });
+
+    
+    $('#storyList').on('click', '.deleteBtn', function() {
+        var storyId = $(this).parent().data('id');
+        $.ajax({
+            url: `https://usmanlive.com/wp-json/api/stories/${storyId}`,
+            method: 'DELETE',
+            success: function(response) {
+                fetchStories(); 
+            }
+        });
+    });
+});
+</script>
+
+</body>
+</html>
