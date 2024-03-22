@@ -2,7 +2,7 @@
 
 :root{
 --c-dark: #242129;
---c-brand: #e1a307;
+--c-brand: #e1aa07;
 --c-brand-light: #cb6110;
 --c-brand-rgb:78,87,212;
 --c-body: #727272;
@@ -153,7 +153,7 @@ z-index: -1;
 }
 
 .products:hover .iconbox{
-    background-color: rgba(255,255,255,0.12);
+    background-color: rgba(255, 255, 255, 0.12);
     color: white;
 }
 
@@ -189,6 +189,8 @@ z-index: -1;
 
 
 
+
+/* APIDATA */
 
 
 
